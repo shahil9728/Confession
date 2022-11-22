@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../partial/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Profile Confession</title>
+</head>
+<style>
+    .navbar {
+        background: linear-gradient(to right, #3c1053, #ad5389);
+    }
+
+    .data {
+        margin-top: 2rem;
+        padding: 10px 10px 10px 10px;
+        display: grid;
+        grid-template-columns: 40% 40%;
+        justify-content: center;
+        align-items: center;
+        background-color: #edebeb;
+        height: 30vh;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .viewmsg {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 20% 40%;
+        border-radius: 8px;
+        width: 90%;
+        height: 15vh;
+        background-color: white;
+        color: black;
+    }
+
+    .viewmsg:hover {
+        text-decoration: underline;
+    }
+
+    .msgimg img {
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .terms {
+        margin-top: 5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    li {
+        list-style: disc;
+    }
+
+    #copy-btn {
+        padding-right: 0vh;
+    }
+
+    .profile img {
+        height: 20px;
+        width: 20px;
+        transition: 0.1s;
+        cursor: pointer;
+    }
+
+    .profile img:hover {
+        height: 21px;
+        width: 21px;
+    }
+
+    .cop-div {
+        text-align: center;
+    }
+</style>
+<script>
+    function show() {
+        var divsty = document.getElementById('showmsg')
+        if (divsty.style.display === 'none') {
+            divsty.style.display = 'block';
+        }
+        else {
+            divsty.style.display = 'none';
+        }
+    }
+    function sentmsg()
+    {
+
+    }
+    function copy() {
+        console.log("HEloo")
+        var copyText = document.getElementById("copy-btn").innerText;
+        console.log(copyText)
+        navigator.clipboard.writeText(copyText);
+    }
+</script>
+
+<body>
+    <div class="navbar-div">
+        <nav class="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">&#9776;</label>
+            <label for="#" class="logo"><a href="index" class="goldgym">ConfessOut</a></label>
+            <ul class="nav-ul">
+                <li><a href="login" class="active">Profile</a></li>
+                <li><a href="settings">Settings</a></li>
+                <li><a href="logout" id="join-now">Log Out</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="profile">
+        <h3>Hey, <%=name%>
+        </h3>
+        <p>Here is your public link:
+        <form action="/user" method="post">
+            <button type="submit" style="background: none;color: red;display: inline;">
+                <p id="copy-btn">
+                    https://www.confessout.com/<%=username%>
+                </p>
+            </button>
+        </form>
+        <div class="cop-div">
+            Copy
+                <img src="../images/copy.png" alt="" id="copy-img" onclick="copy()">
+        </div>
+        </p>
+        <h5>Share your link</h5>
+        <div class="share">
+            <div class="share-fb">
+                <a href="">
+                    <i class="fa fa-facebook icon" style="font-size: 20px"></i>
+                    Share on Facebook
+                </a>
+            </div>
+            <div class="share-insta">
+                <a href="">
+                    <i class="fa fa-instagram icon" style="font-size: 20px"></i>
+                    Share on Facebook
+                </a>
+            </div>
+            <div class="share-whatsapp">
+                <a href="">
+                    <i class="fa fa-whatsapp icon" style="font-size: 20px"></i>
+                    Share on Facebook
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="data">
+        <div class="viewmsg">
+            <div class="msgimg">
+                <img src="../images/recieve.png" alt="send">
+            </div>
+            <div class="msgrecieve" onclick="show()" style="cursor: pointer;">
+                View Recieved
+            </div>
+        </div>
+        <div class="viewmsg">
+            <div class="msgimg">
+                <img src="../images/send.png" alt="send">
+            </div>
+            <div class="msgrecieve" style="cursor: pointer;" onclick="sentmsg()">
+                View Sent
+            </div>
+        </div>
+    </div>
+    </div>
+    <br><br>
+    <div id="showmsg"
+        style="background-color: #edebeb;padding:20px 20px 20px 40px;width: 80%;margin: 0 auto;display: none;">
+        <p style="font-weight: bold;">Messages Recieved by You</p>
+        <br>
+        <% if(msg.length==0) {%>
+            <p>No messages to display</p>
+            <% } %>
+                <ul>
+                    <% for(let i=0;i<msg.length;i++) { %>
+                        <li>
+                            <%=msg[i]%>
+                        </li>
+                        <% } %>
+                </ul>
+                <br>
+    </div>
+    <div class="terms">
+        <p>© Confessout. All rights reserved. 2017</p>
+        <p>Disclaimer : We are not resposible for any kind of lose, harassment, vulgar messages you recvieve while using
+            confssout use this app at your own responsibility.</p>
+    </div>
+</body>
+
+
+</html>

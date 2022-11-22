@@ -1,0 +1,93 @@
+*{
+    scroll-behavior: smooth;
+    margin: 0px 0px;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: raleway,Helvetica,sans-serif;
+}
+.homepage{
+    background-image: url("images/gabriel-l1sqXJXBgd0-unsplash.jpg");
+    background-image: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.content{
+    text-align: center;
+    padding-top: 30vh;
+    color: white;
+}
+h2{
+    font-size: 7vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.content h2{
+    margin-bottom: 3vh;
+}
+.content p{
+    font-weight: lighter;
+    font-size: 4vh;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+}
+button{
+    border: 1px solid white;
+    border-radius: 6vh;
+    padding: 3vh 15vh 3vh 15vh;
+    font-size: 4vh;
+    color: white;
+    background-color: #383b43;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #42454e;
+}
+.sendmsg{
+    text-align: center;
+    padding-top: 12vh;
+    height: 40vh;
+    background-color: rgb(225, 222, 222);
+}
+.sendmsg h2{
+    margin-bottom: 3vh;
+}
+.service{
+    padding-top: 10vh;
+    text-align: center;
+    padding-bottom: 10vh;
+    color: rgb(101, 101, 101);
+}
+.service img{
+    height: 40vh;
+    width: 40vh;
+    margin-bottom: 4vh;
+}
+.service p{
+    font-size: 3vh;
+    padding: 3vh 3vh 3vh 3vh;
+}
+.blank{
+    height: 5vh;
+    background-color: rgb(241, 238, 238);
+}
+.signupend{
+    padding: 10vh;
+    text-align: center;
+    background-color: #3cadd4;
+}
+.signupend h2{
+    color: white;
+    padding-bottom: 8vh;
+}
+.signupend button{
+    border: none;
+}
+.terms{
+    background-color: #383b43;
+    color: gray;
+    text-align: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}

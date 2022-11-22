@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../partial/index.css">
+    <title>Sign Up | Confessout</title>
+</head>
+<script>
+</script>
+<body>
+    <div class="confessout-form">
+        <div class="grid-item confessout">
+            <h2>Confessout</h2>
+            <h3>Sign up to the trend now!!</h3>
+            <form action="/profile" class="signup-form" method="post" onsubmit="return abc()">
+                <input type="email" placeholder="Email" name="email" id="email">
+                <input type="text" placeholder="Name" name="name" autocomplete="off" id="name">
+                <input type="text" placeholder="Username" name="username" autocomplete="nope" id="username1">
+                <input type="password" name="password" id="" placeholder="Password" name="password" autocomplete="nope"
+                    id="pass">
+                <button class="confess-signup-btn" type="submit">
+                    Sign Up
+                </button>
+            </form>
+            <p>By signing up, you agree to our Terms , Data Policy and Cookies Policy .</p>
+        </div>
+        <div class="grid-item have-account">
+            <p>Have a account?
+            <form action="/login">
+                <button class="btn-link" type="submit">Log In</button>
+            </form>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../partial/index.css">
+    <title>Login Now|Confessout</title>
+</head>
+
+<body>
+    <div class="confessout-form">
+        <div class="grid-item confessout confessout-login">
+            <h2>Confessout</h2>
+            <form action="/login" class="signup-form" method="post">
+                <input type="text" placeholder="Email" name="email">
+                <input type="password" name="password" id="" placeholder="Password" name="password">
+                <button class="confess-signup-btn">
+                    Log In
+                </button>
+            </form>
+            <header>
+                <div class="header__center">or</div>
+            </header>
+            <div class="forget-user-div">
+                <p class="forget">Forget Username?</p>
+                <p class="forget">or</p>
+                <p class="forget">Forget Password</p>
+            </div>
+        </div>
+        <div class="grid-item have-account">
+            <p>Dont't have an account?
+            <form action="/signup">
+                <button class="btn-link" type="submit">Sign Up</button>
+            </form>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

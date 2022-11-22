@@ -1,0 +1,10 @@
+T=int(input(''))
+cost=98
+while T!=0:
+ if(T>=1 and T<=200):
+ Q=int(input(''))
+ if(Q>=1 and Q<=200):
+ print("{:.2f}".format((cost*Q*.18)+Q*cost))
+ else:
+ break
+ T=T-1

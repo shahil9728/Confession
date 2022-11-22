@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../partial/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>User Confession</title>
+</head>
+<style>
+    .navbar {
+        background: linear-gradient(to right, #3c1053, #ad5389);
+    }
+    .user-head {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2em;
+        color: rgb(78, 78, 236);
+    }
+
+    .msg {
+        text-align: center;
+    }
+
+    textarea {
+        height: 35vh;
+        width: 80%;
+        border: 3px solid black;
+        border-radius: 1rem;
+        padding: 10px 10px 10px 10px;
+        font-size: medium;
+    }
+
+    .signupnow {
+        background: linear-gradient(to right, #ad5389, #3c1053);
+    }
+
+    .sendbtn {
+        text-align: center;
+    }
+
+    .alert-success {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+
+    .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+    .closebtn {
+        float: right;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        filter: alpha(opacity=20);
+        opacity: .2;
+        cursor: pointer;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    .fade.in {
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <div class="navbar-div">
+        <nav class="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">&#9776;</label>
+            <label for="#" class="logo"><a href="index" class="goldgym">ConfessOut</a></label>
+            <ul class="nav-ul">
+                <li><a href="login" class="active">Profile</a></li>
+                <li><a href="settings">Settings</a></li>
+                <li><a href="logout" id="join-now">Log Out</a></li>
+            </ul>
+        </nav>
+    </div>
+    <% if(success!='' ) { %>
+        <div class="alert alert-success fade in" role="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Success</strong>
+            <%= success %>
+        </div>
+        <% } %>
+            <br>
+            <br>
+            <div class="user-head">
+                <h3>
+                    Send private message to
+                </h3>
+                <br>
+                <h2 id="confessor_name">
+                    <%= name %>
+                </h2>
+            </div>
+            <br><br>
+            <form action="/sendmsg" method="post">
+                <div class="msg">
+                    <textarea name="textarea" placeholder="Leave a message...." id="confess" cols="30" rows="6"
+                        name="textarea"></textarea>
+                </div>
+                <br>
+                <div class="sendbtn">
+                    <button class="signupnow" type="submit">
+                        Send Now
+                    </button>
+            </form>
+            <br><br>
+            <p>
+                Say what you think about or leave a feedback anonymously using the form above..
+            </p>
+            </div>
+</body>
+<script>
+    
+</script>
+
+</html>
