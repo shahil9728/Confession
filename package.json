@@ -2,10 +2,10 @@
     "name": "npm",
     "version": "1.0.0",
     "description": "First NPM PAckage",
-    "main": "index.js",
+    "main": "src/app.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon src/app.js -e js,hbs"
+        "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Shahil KUamr",
     "license": "ISC",
