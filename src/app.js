@@ -128,6 +128,6 @@ var schema = new mongoose.Schema({
 
 
 
-app.listen(4000, (req, res) => {
+app.listen(port, (req, res) => {
     console.log("Server is runnning at 4000");
 })
